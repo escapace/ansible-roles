@@ -1,0 +1,127 @@
+#!/usr/bin/env bash
+# @description continuous integration pipeline entrypoint
+# @import console/error
+# @import console/info
+# @import console/warn
+# @import console/die
+# @import github.com/epiloque/docker-base/docker/dockerBuild
+# @import github.com/epiloque/docker-base/docker/downloadDumbInit
+# @import lang/executeIn
+# @import lang/truth
+# @import manage/manage
+
+declare -A CI_RESULTS
+
+testRole () {
+    local directory="$1"
+    local name
+    local code=0
+
+    name="$(basename "${1}")"
+
+    cd "${directory}" || _ die "${directory} does not exist"
+
+    ansible-galaxy install --force -r tests/requirements.yml -p tests/roles/ >& /dev/null || {
+        _ warn "${name}: failed to install reqirements"
+        code=1
+    }
+
+    # ansible-playbook -i tests/inventory tests/test.yml --syntax-check
+
+    ansible-playbook -i tests/inventory tests/test.yml || {
+        code=1
+    }
+
+    if [[ -f "${directory}/tests/teardown.yml" ]]
+    then
+        ansible-playbook -i tests/inventory tests/teardown.yml >& /dev/null || {
+            _ warn "${name}: teardown failed"
+        }
+    fi
+
+    CI_RESULTS["${name}"]="${code}"
+}
+
+main ()
+{
+    verbose true
+    strict true
+
+    local code=0
+    local directory="${MANAGE_REPOSITORY}/roles"
+
+    [[ -d "${directory}" ]] || _ die "${directory} does not exist"
+
+    if _ required "$@"
+    then
+        for arg in "$@"
+        do
+            if [[ ! -d "${directory}/${arg}" ]]
+            then
+                _ die "${directory}/${arg} does not exist"
+            fi
+        done
+
+        for arg in "$@"
+        do
+            testRole "${directory}/${arg}"
+        done
+    else
+        for roleDir in ${directory}/*
+        do
+            if [[ -d "${roleDir}" ]]
+            then
+                testRole "${roleDir}"
+            fi
+        done
+    fi
+
+    for name in "${!CI_RESULTS[@]}"
+    do
+        local value=${CI_RESULTS[${name}]}
+
+        if (( "${value}" == 0 ))
+        then
+            _ info "'${name}' passed"
+        else
+            _ error "'${name}' failed"
+            code+=1
+        fi
+    done
+
+    exit "${code}"
+
+    # if _ truth "$DOCKER"
+    # then
+    #     _ info 'From inside docker'
+    # else
+    #     _ downloadDumbInit
+    #     _ dockerBuild ci
+    #
+    #     local image="${DOCKER_SCOPE:-internal}/ci"
+    #
+    #     docker run --rm \
+    #         -e CI="${CI}" \
+    #         -e TRAVIS_TAG="${TRAVIS_TAG}" \
+    #         -e TRAVIS_BRANCH="${TRAVIS_BRANCH}" \
+    #         -e TRAVIS_COMMIT="${TRAVIS_COMMIT}" \
+    #         -e TRAVIS_COMMIT_RANGE="${TRAVIS_COMMIT_RANGE}" \
+    #         -e TRAVIS_PULL_REQUEST="${TRAVIS_PULL_REQUEST}" \
+    #         -e TRAVIS_PULL_REQUEST_BRANCH="${TRAVIS_PULL_REQUEST_BRANCH}" \
+    #         "${image}" ci
+    # fi
+}
+
+# onExit ()
+# {
+#     if (( $1 == 0 ))
+#     then
+#     if _ truth "$DOCKER"; then
+#         true
+#     else
+#         _ warn "Exiting."
+#     fi
+#     else
+#         _ error "An error with exit code \"$1\" has occured."
+#     fi
+# }

@@ -1,0 +1,45 @@
+[submodule "vendor/manage"]
+	path = vendor/manage
+	url = https://github.com/epiloque/manage.git
+[submodule "roles/sudo"]
+	path = roles/epiloque.sudo
+	url = https://github.com/epiloque/ansible-sudo.git
+[submodule "roles/epel"]
+	path = roles/epiloque.epel
+	url = https://github.com/epiloque/ansible-epel
+[submodule "roles/lvm"]
+	path = roles/epiloque.lvm
+	url = https://github.com/epiloque/ansible-lvm.git
+[submodule "roles/ferm"]
+	path = roles/epiloque.ferm
+	url = https://github.com/epiloque/ansible-ferm
+[submodule "roles/packagecloud"]
+	path = roles/epiloque.packagecloud
+	url = https://github.com/epiloque/ansible-packagecloud.git
+[submodule "roles/tunnelbroker"]
+	path = roles/epiloque.tunnelbroker
+	url = https://github.com/epiloque/ansible-tunnelbroker.git
+[submodule "roles/ntp"]
+	path = roles/epiloque.ntp
+	url = https://github.com/epiloque/ansible-ntp
+[submodule "roles/virtualbox"]
+	path = roles/epiloque.virtualbox
+	url = https://github.com/epiloque/ansible-virtualbox.git
+[submodule "roles/ssh"]
+	path = roles/epiloque.ssh
+	url = https://github.com/epiloque/ansible-ssh.git
+[submodule "roles/logrotate"]
+	path = roles/epiloque.logrotate
+	url = https://github.com/epiloque/ansible-logrotate.git
+[submodule "roles/unattended-upgrades"]
+	path = roles/epiloque.unattended-upgrades
+	url = https://github.com/epiloque/ansible-unattended-upgrades.git
+[submodule "roles/epiloque"]
+	path = roles/epiloque
+	url = https://github.com/epiloque/ansible-epiloque.git
+[submodule "roles/duo_unix"]
+	path = roles/epiloque.duo_unix
+	url = https://github.com/epiloque/ansible-duo_unix.git
+[submodule "roles/epiloque.epiloque"]
+	path = roles/epiloque.epiloque
+	url = https://github.com/epiloque/ansible-epiloque.git
