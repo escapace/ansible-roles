@@ -50,11 +50,18 @@ main ()
     local code=0
     local directory="${MANAGE_REPOSITORY}/roles"
 
+    local queue=($@)
+
+    if _ required "${TEST_SUITE}"
+    then
+        queue=(${TEST_SUITE})
+    fi
+
     [[ -d "${directory}" ]] || _ die "${directory} does not exist"
 
-    if _ required "$@"
+    if _ required "${queue[@]}"
     then
-        for arg in "$@"
+        for arg in "${queue[@]}"
         do
             if [[ ! -d "${directory}/${arg}" ]]
             then
@@ -62,7 +69,7 @@ main ()
             fi
         done
 
-        for arg in "$@"
+        for arg in "${queue[@]}"
         do
             testRole "${directory}/${arg}"
         done
@@ -90,38 +97,4 @@ main ()
     done
 
     exit "${code}"
-
-    # if _ truth "$DOCKER"
-    # then
-    #     _ info 'From inside docker'
-    # else
-    #     _ downloadDumbInit
-    #     _ dockerBuild ci
-    #
-    #     local image="${DOCKER_SCOPE:-internal}/ci"
-    #
-    #     docker run --rm \
-    #         -e CI="${CI}" \
-    #         -e TRAVIS_TAG="${TRAVIS_TAG}" \
-    #         -e TRAVIS_BRANCH="${TRAVIS_BRANCH}" \
-    #         -e TRAVIS_COMMIT="${TRAVIS_COMMIT}" \
-    #         -e TRAVIS_COMMIT_RANGE="${TRAVIS_COMMIT_RANGE}" \
-    #         -e TRAVIS_PULL_REQUEST="${TRAVIS_PULL_REQUEST}" \
-    #         -e TRAVIS_PULL_REQUEST_BRANCH="${TRAVIS_PULL_REQUEST_BRANCH}" \
-    #         "${image}" ci
-    # fi
 }
-
-# onExit ()
-# {
-#     if (( $1 == 0 ))
-#     then
-#     if _ truth "$DOCKER"; then
-#         true
-#     else
-#         _ warn "Exiting."
-#     fi
-#     else
-#         _ error "An error with exit code \"$1\" has occured."
-#     fi
-# }

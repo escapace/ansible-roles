@@ -1,0 +1,25 @@
+language: bash
+services: docker
+env:
+  - TEST_SUITE=epiloque.docker
+  - TEST_SUITE=epiloque.duo_unix
+  - TEST_SUITE=epiloque.epel
+  - TEST_SUITE=epiloque.epiloque
+  - TEST_SUITE=epiloque.ferm
+  - TEST_SUITE=epiloque.logrotate
+  - TEST_SUITE=epiloque.lvm
+  - TEST_SUITE=epiloque.ntp
+  - TEST_SUITE=epiloque.packagecloud
+  - TEST_SUITE=epiloque.ssh
+  - TEST_SUITE=epiloque.sudo
+  - TEST_SUITE=epiloque.tunnelbroker
+  - TEST_SUITE=epiloque.unattended-upgrades
+  - TEST_SUITE=epiloque.virtualbox
+
+script:
+  - ./manage ci
+
+notifications:
+  email:
+    on_success: change
+    on_failure: always

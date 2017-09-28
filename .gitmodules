@@ -43,3 +43,6 @@
 [submodule "roles/epiloque.epiloque"]
 	path = roles/epiloque.epiloque
 	url = https://github.com/epiloque/ansible-epiloque.git
+[submodule "roles/epiloque.docker"]
+	path = roles/epiloque.docker
+	url = https://github.com/epiloque/ansible-docker.git
