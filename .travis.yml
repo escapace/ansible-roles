@@ -17,9 +17,11 @@ env:
   - TEST_SUITE=epiloque.virtualbox
 
 script:
+  - gpg --keyserver pgp.mit.edu --recv-key 0x671C330913823C5B
   - ./manage ci
 
 notifications:
   email:
     on_success: change
     on_failure: always
+
