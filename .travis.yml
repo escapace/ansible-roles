@@ -17,6 +17,12 @@ env:
   - TEST_SUITE=epiloque.virtualbox
 
 script:
+  - sudo pip install docker-py
+  - sudo apt-get install -y sshpass software-properties-common python-software-properties
+  - sudo apt-add-repository -y ppa:ansible/ansible
+  - sudo apt-get update -qq
+  - sudo apt-get install -y ansible
+  - sudo rm /usr/bin/python && sudo ln -s /usr/bin/python2.7 /usr/bin/python
   - gpg --keyserver pgp.mit.edu --recv-key 0x671C330913823C5B
   - ./manage ci
 
