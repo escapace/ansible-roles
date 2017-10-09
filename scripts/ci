@@ -92,7 +92,7 @@ main ()
             _ info "'${name}' passed"
         else
             _ error "'${name}' failed"
-            code+=1
+            ((code++))
         fi
     done
 
