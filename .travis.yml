@@ -19,7 +19,8 @@ env:
   - TEST_SUITE=epiloque.virtualbox
 
 script:
-  - sudo pip install docker-py ansible==2.4.0.0
+  - pip install -U pip setuptools
+  - pip install docker-py ansible==2.4.0.0
   - ansible --version
   - gpg --keyserver pgp.mit.edu --recv-key 0x671C330913823C5B
   - ./manage ci
