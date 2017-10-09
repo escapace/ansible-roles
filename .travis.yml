@@ -1,4 +1,6 @@
-language: bash
+language: python
+python:
+  - "3.6"
 services: docker
 env:
   - TEST_SUITE=epiloque.docker
@@ -17,10 +19,8 @@ env:
   - TEST_SUITE=epiloque.virtualbox
 
 script:
-  - sudo apt-get update -qq
-  - sudo apt-get install -y python3 python3-pip
-  - sudo pip3 install -U pip setuptools
-  - sudo pip3 install docker-py ansible==2.4.0.0
+  - sudo pip install docker-py
+  - pip install docker-py ansible==2.4.0.0
   - ansible --version
   - gpg --keyserver pgp.mit.edu --recv-key 0x671C330913823C5B
   - ./manage ci
