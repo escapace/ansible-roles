@@ -10,7 +10,6 @@ env:
 # Enable manage repository scripts
 enable:
   - help
-  - test
 
 # Default script
 default: help
