@@ -1,48 +1,45 @@
 [submodule "vendor/manage"]
 	path = vendor/manage
-	url = https://github.com/epiloque/manage.git
+	url = https://github.com/escapace/manage.git
 [submodule "roles/sudo"]
-	path = roles/epiloque.sudo
-	url = https://github.com/epiloque/ansible-sudo.git
+	path = roles/escapace.sudo
+	url = https://github.com/escapace/ansible-sudo.git
 [submodule "roles/epel"]
-	path = roles/epiloque.epel
-	url = https://github.com/epiloque/ansible-epel
+	path = roles/escapace.epel
+	url = https://github.com/escapace/ansible-epel
 [submodule "roles/lvm"]
-	path = roles/epiloque.lvm
-	url = https://github.com/epiloque/ansible-lvm.git
+	path = roles/escapace.lvm
+	url = https://github.com/escapace/ansible-lvm.git
 [submodule "roles/ferm"]
-	path = roles/epiloque.ferm
-	url = https://github.com/epiloque/ansible-ferm
+	path = roles/escapace.ferm
+	url = https://github.com/escapace/ansible-ferm
 [submodule "roles/packagecloud"]
-	path = roles/epiloque.packagecloud
-	url = https://github.com/epiloque/ansible-packagecloud.git
+	path = roles/escapace.packagecloud
+	url = https://github.com/escapace/ansible-packagecloud.git
 [submodule "roles/tunnelbroker"]
-	path = roles/epiloque.tunnelbroker
-	url = https://github.com/epiloque/ansible-tunnelbroker.git
+	path = roles/escapace.tunnelbroker
+	url = https://github.com/escapace/ansible-tunnelbroker.git
 [submodule "roles/ntp"]
-	path = roles/epiloque.ntp
-	url = https://github.com/epiloque/ansible-ntp
+	path = roles/escapace.ntp
+	url = https://github.com/escapace/ansible-ntp
 [submodule "roles/virtualbox"]
-	path = roles/epiloque.virtualbox
-	url = https://github.com/epiloque/ansible-virtualbox.git
+	path = roles/escapace.virtualbox
+	url = https://github.com/escapace/ansible-virtualbox.git
 [submodule "roles/ssh"]
-	path = roles/epiloque.ssh
-	url = https://github.com/epiloque/ansible-ssh.git
+	path = roles/escapace.ssh
+	url = https://github.com/escapace/ansible-ssh.git
 [submodule "roles/logrotate"]
-	path = roles/epiloque.logrotate
-	url = https://github.com/epiloque/ansible-logrotate.git
+	path = roles/escapace.logrotate
+	url = https://github.com/escapace/ansible-logrotate.git
 [submodule "roles/unattended-upgrades"]
-	path = roles/epiloque.unattended-upgrades
-	url = https://github.com/epiloque/ansible-unattended-upgrades.git
-[submodule "roles/epiloque"]
-	path = roles/epiloque
-	url = https://github.com/epiloque/ansible-epiloque.git
+	path = roles/escapace.unattended-upgrades
+	url = https://github.com/escapace/ansible-unattended-upgrades.git
 [submodule "roles/duo_unix"]
-	path = roles/epiloque.duo_unix
-	url = https://github.com/epiloque/ansible-duo_unix.git
+	path = roles/escapace.duo_unix
+	url = https://github.com/escapace/ansible-duo_unix.git
 [submodule "roles/epiloque.epiloque"]
 	path = roles/epiloque.epiloque
 	url = https://github.com/epiloque/ansible-epiloque.git
 [submodule "roles/epiloque.docker"]
-	path = roles/epiloque.docker
-	url = https://github.com/epiloque/ansible-docker.git
+	path = roles/escapace.docker
+	url = https://github.com/escapace/ansible-docker.git

@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 # @description continuous integration pipeline entrypoint
+# @import console/die
 # @import console/error
 # @import console/info
 # @import console/warn
-# @import console/die
 # @import github.com/epiloque/docker-base/docker/dockerBuild
-# @import github.com/epiloque/docker-base/docker/downloadDumbInit
-# @import lang/executeIn
-# @import lang/truth
-# @import manage/manage
 
 declare -A CI_RESULTS
 
