@@ -3,26 +3,26 @@ python:
   - "3.6"
 services: docker
 env:
-  - TEST_SUITE=epiloque.docker
-  - TEST_SUITE=epiloque.duo_unix
-  - TEST_SUITE=epiloque.epel
   - TEST_SUITE=epiloque.epiloque
-  - TEST_SUITE=epiloque.ferm
-  - TEST_SUITE=epiloque.logrotate
-  - TEST_SUITE=epiloque.lvm
-  - TEST_SUITE=epiloque.ntp
-  - TEST_SUITE=epiloque.packagecloud
-  - TEST_SUITE=epiloque.ssh
-  - TEST_SUITE=epiloque.sudo
-  - TEST_SUITE=epiloque.tunnelbroker
-  - TEST_SUITE=epiloque.unattended-upgrades
-  - TEST_SUITE=epiloque.virtualbox
+  - TEST_SUITE=escapace.docker
+  - TEST_SUITE=escapace.duo_unix
+  - TEST_SUITE=escapace.epel
+  - TEST_SUITE=escapace.ferm
+  - TEST_SUITE=escapace.logrotate
+  - TEST_SUITE=escapace.lvm
+  - TEST_SUITE=escapace.ntp
+  - TEST_SUITE=escapace.packagecloud
+  - TEST_SUITE=escapace.ssh
+  - TEST_SUITE=escapace.sudo
+  - TEST_SUITE=escapace.tunnelbroker
+  - TEST_SUITE=escapace.unattended-upgrades
+  - TEST_SUITE=escapace.virtualbox
 
 script:
   - sudo pip install docker-py
   - pip install docker-py ansible==2.4.0.0
   - ansible --version
-  - gpg --keyserver pgp.mit.edu --recv-key 0x671C330913823C5B
+  - gpg --keyserver ha.pool.sks-keyservers.net --recv-key 13F26F82E955B8B8CE469054F29CCEBC83FD4525
   - ./manage ci
 
 notifications:
