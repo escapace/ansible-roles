@@ -3,7 +3,6 @@ python:
   - "3.6"
 services: docker
 env:
-  - TEST_SUITE=epiloque.epiloque
   - TEST_SUITE=escapace.docker
   - TEST_SUITE=escapace.duo_unix
   - TEST_SUITE=escapace.epel

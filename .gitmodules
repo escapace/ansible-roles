@@ -37,9 +37,6 @@
 [submodule "roles/duo_unix"]
 	path = roles/escapace.duo_unix
 	url = https://github.com/escapace/ansible-duo_unix.git
-[submodule "roles/epiloque.epiloque"]
-	path = roles/epiloque.epiloque
-	url = https://github.com/epiloque/ansible-epiloque.git
 [submodule "roles/docker"]
 	path = roles/escapace.docker
 	url = https://github.com/escapace/ansible-docker.git
