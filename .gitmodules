@@ -40,3 +40,6 @@
 [submodule "roles/docker"]
 	path = roles/escapace.docker
 	url = https://github.com/escapace/ansible-docker.git
+[submodule "roles/escapace.dotfiles"]
+	path = roles/escapace.dotfiles
+	url = https://github.com/escapace/ansible-dotfiles.git
