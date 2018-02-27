@@ -10,7 +10,7 @@ Centos and RHEL operating systems.
 -   Namespaced role variables
 -   Continously tested on Docker, AWS EC2 and baremetal \[[1](https://travis-ci.org/escapace/ansible-roles),[2](https://travis-ci.org/escapace/stack "Travis CI")]
 
-## Table of Contents
+# Table of Contents
 
 -   [Roles](#roles)
     -   [dotfiles](#dotfiles)
@@ -29,9 +29,9 @@ Centos and RHEL operating systems.
     -   [virtualbox](#virtualbox)
 -   [License](#license)
 
-## Roles
+# Roles
 
-### dotfiles
+## dotfiles
 
 Drop-in user-space, user-agnostic zsh; tmux; git &c configuration. \[[3](https://github.com/l5x/dotfiles "dotfiles github repository"),[4](https://github.com/l5x/vim "vim dotfiles github repository")]
 
@@ -39,7 +39,7 @@ Drop-in user-space, user-agnostic zsh; tmux; git &c configuration. \[[3](https:/
 $ ansible-galaxy install escapace.dotfiles
 ```
 
-### docker
+## docker
 
 Docker configuration tailored for the enterprise linux operating system.
 
@@ -52,7 +52,7 @@ Docker configuration tailored for the enterprise linux operating system.
 $ ansible-galaxy install escapace.docker
 ```
 
-### duo_unix
+## duo_unix
 
 Two factor, keyboard interactive OpenSSH and PAM authentication for users in a predefined group. \[[6](https://duo.com/docs/duounix "Duo Unix ")]
 
@@ -60,7 +60,7 @@ Two factor, keyboard interactive OpenSSH and PAM authentication for users in a p
 $ ansible-galaxy install escapace.duo_unix
 ```
 
-### epel
+## epel
 
 Ansible role for the extra packages for enterprise linux repository. \[[7](https://fedoraproject.org/wiki/EPEL "EPEL")]
 
@@ -68,7 +68,7 @@ Ansible role for the extra packages for enterprise linux repository. \[[7](https
 $ ansible-galaxy install escapace.epel
 ```
 
-### ferm
+## ferm
 
 Ansible role for ferm \[[8](http://ferm.foo-projects.org "ferm")] iptables manager. Includes sensible systemctl defaults and implementation of the recommendations for filtering ICMPv6 messages (RFC4890) \[[9](https://www.ietf.org/rfc/rfc4890.txt "Recommendations for Filtering ICMPv6 Messages in Firewalls")]
 
@@ -76,7 +76,7 @@ Ansible role for ferm \[[8](http://ferm.foo-projects.org "ferm")] iptables manag
 $ ansible-galaxy install escapace.ferm
 ```
 
-### logrotate
+## logrotate
 
 Log file automatic rotation, compression and removal.
 
@@ -84,7 +84,7 @@ Log file automatic rotation, compression and removal.
 $ ansible-galaxy install escapace.logrotate
 ```
 
-### lvm
+## lvm
 
 A declarative LVM partitioner solution. The partition layout is described in a declarative manner which is then processed on startup by the storage setup service effectively reconciling the configuration state with the actual partitioning layout.
 
@@ -92,7 +92,7 @@ A declarative LVM partitioner solution. The partition layout is described in a d
 $ ansible-galaxy install escapace.lvm
 ```
 
-### ntp
+## ntp
 
 Ansible role for the chrony \[[10](https://chrony.tuxfamily.org "chrony")] network time protocol daemon.
 
@@ -100,7 +100,7 @@ Ansible role for the chrony \[[10](https://chrony.tuxfamily.org "chrony")] netwo
 $ ansible-galaxy install escapace.ntp
 ```
 
-### packagecloud
+## packagecloud
 
 Ansible role for the escapace’s software repository. \[[11](https://github.com/escapace/rpmbuild "escapace’s rpmbuild"),[12](https://packagecloud.io/escapace/stack/ "packagecloud repository")]
 
@@ -108,7 +108,7 @@ Ansible role for the escapace’s software repository. \[[11](https://github.com
 $ ansible-galaxy install escapace.packagecloud
 ```
 
-### ssh
+## ssh
 
 Ansible role for OpenSSH configuration implementing Mozilla’s OpenSSH security guidelines \[[13](https://infosec.mozilla.org/guidelines/openssh "Mozilla’s OpenSSH security guidelines ")] and support for optional keyboard interactive authentication.
 
@@ -116,7 +116,7 @@ Ansible role for OpenSSH configuration implementing Mozilla’s OpenSSH security
 $ ansible-galaxy install escapace.ssh
 ```
 
-### sudo
+## sudo
 
 Ansible role implementing sensible sudo defaults.
 
@@ -124,7 +124,7 @@ Ansible role implementing sensible sudo defaults.
 $ ansible-galaxy install escapace.sudo
 ```
 
-### tunnelbroker
+## tunnelbroker
 
 Ansible role for Hurricane Electric’s IPv6 tunnel broker.
 
@@ -132,7 +132,7 @@ Ansible role for Hurricane Electric’s IPv6 tunnel broker.
 $ ansible-galaxy install escapace.tunnelbroker
 ```
 
-### unnatended upgrades
+## unnatended upgrades
 
 Ansible role implementing unnatended security update policy.
 
@@ -140,7 +140,7 @@ Ansible role implementing unnatended security update policy.
 $ ansible-galaxy install escapace.unattended-upgrades
 ```
 
-### virtualbox
+## virtualbox
 
 Ansible role for Oracle VM VirtualBox hypervisor.
 
@@ -148,7 +148,7 @@ Ansible role for Oracle VM VirtualBox hypervisor.
 $ ansible-galaxy install escapace.virtualbox
 ```
 
-## License
+# License
 
 This software is released under the terms of the Apache-2.0 license.
 
