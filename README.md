@@ -12,23 +12,13 @@ Centos and RHEL operating systems.
 
 ## Table of Contents
 
-## dotfiles
-
-Drop-in user-space, user-agnostic zsh; tmux; git &c configuration. \[[3](https://github.com/l5x/dotfiles "dotfiles github repository"),[4](https://github.com/l5x/vim "vim dotfiles github repository")]
-
-### Installation
-
-```sh
-$ ansible-galaxy install escapace.dotfiles
-```
-
 ## docker
 
 Docker configuration tailored for the enterprise linux operating system.
 
 -   Docker best practices and guidelines 
 -   Support for docker community and enterprise edition
--   Devicemapper storage driver with thinly provisioned logical volumes \[[5](https://docs.docker.com/storage/storagedriver/select-storage-driver/ "Docker storage driver documentation")]
+-   Devicemapper storage driver with thinly provisioned logical volumes \[[3](https://docs.docker.com/storage/storagedriver/select-storage-driver/ "Docker storage driver documentation")]
 -   Systemd execution order tailored for network mounted block storage
 
 ### Installation
@@ -36,6 +26,30 @@ Docker configuration tailored for the enterprise linux operating system.
 ```sh
 $ ansible-galaxy install escapace.docker
 ```
+
+| Variable | Default | Description |
+| --- |  :---: | --- |
+| `docker_lvm_data_volume_size` | `95%VG` | Docker LVM volume size |
+| `docker_volume_name` | `docker` | Docker LVM volume name |
+| `docker_volume_group_name` | `default` | Docker LVM volume group name |
+| `docker_icc_enabled` | `false` | Docker inter-containter networking |
+| `docker_ipv4_cidr` | `192.168.0.0/16` | Docker IPv4 network CIDR |
+| `docker_ipv6_enabled` | `false`| Docker IPv6 support |
+| `docker_ipv6_cidr` | `2001:db8:1::/64` | Docker IPv6 network CIDR |
+| `docker_edition` | `ce` | Docker edition |
+| `docker_gc_install` | `true` | Docker garbage collection of containers and images |
+| `docker_selinux_enabled` | `true` | Docker SELinux support |
+
+## dotfiles
+
+Drop-in user-space, user-agnostic zsh; tmux; git &c configuration. \[[4](https://github.com/l5x/dotfiles "dotfiles github repository"),[5](https://github.com/l5x/vim "vim dotfiles github repository")]
+
+### Installation
+
+```sh
+$ ansible-galaxy install escapace.dotfiles
+```
+
 
 ## duo_unix
 
