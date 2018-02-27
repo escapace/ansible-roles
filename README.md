@@ -59,7 +59,6 @@ $ ansible-galaxy install escapace.dotfiles
 | `dotfiles_key` | | OpenSSH publick key |
 | `dotfiles_keyboard_interactive_group` | | OpenSSH keyboard interactive group |
 
-
 ## duo_unix
 
 Two factor, keyboard interactive OpenSSH and PAM authentication for users in a predefined group. \[[6](https://duo.com/docs/duounix "Duo Unix ")]
@@ -83,7 +82,6 @@ $ ansible-galaxy install escapace.duo_unix
 | `duo_unix_duo_prompts` | `3` | Maximum number of prompts before denying access |
 | `duo_unix_autopush` | `no` | automatically send a push login request |
 
-
 ## epel
 
 Ansible role for the extra packages for enterprise linux repository. \[[7](https://fedoraproject.org/wiki/EPEL "EPEL")]
@@ -94,6 +92,10 @@ Ansible role for the extra packages for enterprise linux repository. \[[7](https
 $ ansible-galaxy install escapace.epel
 ```
 
+| Variable | Default | Description |
+| --- |  :---: | --- |
+| `epel_url` | `https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm` | `epel-release` package url |
+
 ## ferm
 
 Ansible role for ferm \[[8](http://ferm.foo-projects.org "ferm")] iptables manager. Includes sensible systemctl defaults and implementation of the recommendations for filtering ICMPv6 messages (RFC4890) \[[9](https://www.ietf.org/rfc/rfc4890.txt "Recommendations for Filtering ICMPv6 Messages in Firewalls")]
@@ -103,6 +105,14 @@ Ansible role for ferm \[[8](http://ferm.foo-projects.org "ferm")] iptables manag
 ```sh
 $ ansible-galaxy install escapace.ferm
 ```
+
+### Variables
+
+| Variable | Default | Description |
+| --- |  :---: | --- |
+| `ferm_ipv4_forwarding` | `1` | Enable IPv4 forwarding |
+| `ferm_ipv6_forwarding` | `1` | Enable IPv6 forwarding |
+| `ferm_ipv6_accept_ra` | `0` | Accept router advertisements |
 
 ## logrotate
 
