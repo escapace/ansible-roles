@@ -12,6 +12,73 @@ Centos and RHEL operating systems.
 
 ## Table of Contents
 
+-   -   [docker](#docker)
+
+        -   [Installation](#installation)
+        -   [Variables](#variables)
+
+    -   [dotfiles](#dotfiles)
+
+        -   [Installation](#installation-1)
+        -   [Variables](#variables-1)
+
+    -   [duo_unix](#duo_unix)
+
+        -   [Installation](#installation-2)
+        -   [Variables](#variables-2)
+
+    -   [epel](#epel)
+
+        -   [Installation](#installation-3)
+
+    -   [ferm](#ferm)
+
+        -   [Installation](#installation-4)
+        -   [Variables](#variables-3)
+
+    -   [logrotate](#logrotate)
+
+        -   [Installation](#installation-5)
+
+    -   [lvm](#lvm)
+
+        -   [Installation](#installation-6)
+        -   [Variables](#variables-4)
+
+    -   [ntp](#ntp)
+
+        -   [Installation](#installation-7)
+        -   [Variables](#variables-5)
+
+    -   [packagecloud](#packagecloud)
+
+        -   [Installation](#installation-8)
+
+    -   [ssh](#ssh)
+
+        -   [Installation](#installation-9)
+        -   [Variables](#variables-6)
+
+    -   [sudo](#sudo)
+
+        -   [Installation](#installation-10)
+
+    -   [tunnelbroker](#tunnelbroker)
+
+        -   [Installation](#installation-11)
+        -   [Variables](#variables-7)
+
+    -   [unnatended upgrades](#unnatended-upgrades)
+
+        -   [Installation](#installation-12)
+        -   [Variables](#variables-8)
+
+    -   [virtualbox](#virtualbox)
+
+        -   [Installation](#installation-13)
+        -   [Variables](#variables-9)
+-   [License](#license)
+
 ## docker
 
 Docker configuration tailored for the enterprise linux operating system.
@@ -29,18 +96,18 @@ $ ansible-galaxy install escapace.docker
 
 ### Variables
 
-| Variable | Default | Description |
-| --- |  :---: | --- |
-| `docker_lvm_data_volume_size` | `95%VG` | Docker LVM volume size |
-| `docker_volume_name` | `docker` | Docker LVM volume name |
-| `docker_volume_group_name` | `default` | Docker LVM volume group name |
-| `docker_icc_enabled` | `false` | Docker inter-containter networking |
-| `docker_ipv4_cidr` | `192.168.0.0/16` | Docker IPv4 network CIDR |
-| `docker_ipv6_enabled` | `false`| Docker IPv6 support |
-| `docker_ipv6_cidr` | `2001:db8:1::/64` | Docker IPv6 network CIDR |
-| `docker_edition` | `ce` | Docker edition |
-| `docker_gc_install` | `true` | Docker garbage collection of containers and images |
-| `docker_selinux_enabled` | `true` | Docker SELinux support |
+| Variable                      |      Default      | Description                                        |
+| ----------------------------- | :---------------: | -------------------------------------------------- |
+| `docker_lvm_data_volume_size` |      `95%VG`      | Docker LVM volume size                             |
+| `docker_volume_name`          |      `docker`     | Docker LVM volume name                             |
+| `docker_volume_group_name`    |     `default`     | Docker LVM volume group name                       |
+| `docker_icc_enabled`          |      `false`      | Docker inter-containter networking                 |
+| `docker_ipv4_cidr`            |  `192.168.0.0/16` | Docker IPv4 network CIDR                           |
+| `docker_ipv6_enabled`         |      `false`      | Docker IPv6 support                                |
+| `docker_ipv6_cidr`            | `2001:db8:1::/64` | Docker IPv6 network CIDR                           |
+| `docker_edition`              |        `ce`       | Docker edition                                     |
+| `docker_gc_install`           |       `true`      | Docker garbage collection of containers and images |
+| `docker_selinux_enabled`      |       `true`      | Docker SELinux support                             |
 
 ## dotfiles
 
@@ -51,13 +118,14 @@ Drop-in user-space, user-agnostic zsh; tmux; git &c configuration. \[[4](https:/
 ```sh
 $ ansible-galaxy install escapace.dotfiles
 ```
+
 ### Variables
 
-| Variable | Default | Description |
-| --- |  :---: | --- |
-| `dotfiles_username` | | Username |
-| `dotfiles_key` | | OpenSSH publick key |
-| `dotfiles_keyboard_interactive_group` | | OpenSSH keyboard interactive group |
+| Variable                              | Default | Description                        |
+| ------------------------------------- | :-----: | ---------------------------------- |
+| `dotfiles_username`                   |         | Username                           |
+| `dotfiles_key`                        |         | OpenSSH publick key                |
+| `dotfiles_keyboard_interactive_group` |         | OpenSSH keyboard interactive group |
 
 ## duo_unix
 
@@ -71,16 +139,16 @@ $ ansible-galaxy install escapace.duo_unix
 
 ### Variables
 
-| Variable | Default | Description |
-| --- |  :---: | --- |
-| `duo_unix_duo_ikey` | | Duo Security integration key |
-| `duo_unix_duo_skey` | | Duo Security secret key |
-| `duo_unix_duo_host` | | Duo Security API hostname |
-| `duo_unix_groups` | | Comma-separated list of groups |
-| `duo_unix_duo_pushinfo` | `no` | Include information in the Duo Push message |
-| `duo_unix_duo_failmode` | `secure` | fail "safe" (allow access) or "secure" (deny access) |
-| `duo_unix_duo_prompts` | `3` | Maximum number of prompts before denying access |
-| `duo_unix_autopush` | `no` | automatically send a push login request |
+| Variable                |  Default | Description                                          |
+| ----------------------- | :------: | ---------------------------------------------------- |
+| `duo_unix_duo_ikey`     |          | Duo Security integration key                         |
+| `duo_unix_duo_skey`     |          | Duo Security secret key                              |
+| `duo_unix_duo_host`     |          | Duo Security API hostname                            |
+| `duo_unix_groups`       |          | Comma-separated list of groups                       |
+| `duo_unix_duo_pushinfo` |   `no`   | Include information in the Duo Push message          |
+| `duo_unix_duo_failmode` | `secure` | fail “safe” (allow access) or “secure” (deny access) |
+| `duo_unix_duo_prompts`  |    `3`   | Maximum number of prompts before denying access      |
+| `duo_unix_autopush`     |   `no`   | automatically send a push login request              |
 
 ## epel
 
@@ -92,8 +160,8 @@ Ansible role for the extra packages for enterprise linux repository. \[[7](https
 $ ansible-galaxy install escapace.epel
 ```
 
-| Variable | Default | Description |
-| --- |  :---: | --- |
+| Variable   |                                  Default                                 | Description                |
+| ---------- | :----------------------------------------------------------------------: | -------------------------- |
 | `epel_url` | `https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm` | `epel-release` package url |
 
 ## ferm
@@ -108,11 +176,11 @@ $ ansible-galaxy install escapace.ferm
 
 ### Variables
 
-| Variable | Default | Description |
-| --- |  :---: | --- |
-| `ferm_ipv4_forwarding` | `1` | Enable IPv4 forwarding |
-| `ferm_ipv6_forwarding` | `1` | Enable IPv6 forwarding |
-| `ferm_ipv6_accept_ra` | `0` | Accept router advertisements |
+| Variable               | Default | Description                  |
+| ---------------------- | :-----: | ---------------------------- |
+| `ferm_ipv4_forwarding` |   `1`   | Enable IPv4 forwarding       |
+| `ferm_ipv6_forwarding` |   `1`   | Enable IPv6 forwarding       |
+| `ferm_ipv6_accept_ra`  |   `0`   | Accept router advertisements |
 
 ## logrotate
 
@@ -136,10 +204,10 @@ $ ansible-galaxy install escapace.lvm
 
 ### Variables
 
-| Variable | Default | Description |
-| --- |  :---: | --- |
-| `lvm_volume_group_name` | `default` | Volume group name |
-| `lvm_physical_device` | | Physical device such as `/dev/xvdb` |
+| Variable                |  Default  | Description                         |
+| ----------------------- | :-------: | ----------------------------------- |
+| `lvm_volume_group_name` | `default` | Volume group name                   |
+| `lvm_physical_device`   |           | Physical device such as `/dev/xvdb` |
 
 ## ntp
 
@@ -153,10 +221,10 @@ $ ansible-galaxy install escapace.ntp
 
 ### Variables
 
-| Variable | Default | Description |
-| --- |  :---: | --- |
-| `ntp_server_options` | `iburst` | Server options |
-| `ntp_stratumweight` | `0.001` | How important is stratum when selecting source |
+| Variable             |  Default | Description                                    |
+| -------------------- | :------: | ---------------------------------------------- |
+| `ntp_server_options` | `iburst` | Server options                                 |
+| `ntp_stratumweight`  |  `0.001` | How important is stratum when selecting source |
 
 ## packagecloud
 
@@ -180,8 +248,8 @@ $ ansible-galaxy install escapace.ssh
 
 ### Variables
 
-| Variable | Default | Description |
-| --- |  :---: | --- |
+| Variable                         |      Default      | Description                        |
+| -------------------------------- | :---------------: | ---------------------------------- |
 | `ssh_keyboard_interactive_group` | `kbd-interactive` | OpenSSH keyboard interactive group |
 
 ## sudo
@@ -206,14 +274,13 @@ $ ansible-galaxy install escapace.tunnelbroker
 
 ### Variables
 
-| Variable | Default | Description |
-| --- |  :---: | --- |
-| `tunnelbroker_interface` | `sit1` | Network interface name |
-| `tunnelbroker_defaultgw` | `true` | Route all IPv6 traffic through tunnel broker |
-| `tunnelbroker_client_ipv6` |  | Client IPv6 addresss with the mask |
-| `tunnelbroker_client_ipv6` |  | Server IPv4 address |
-| `tunnelbroker_server_ipv6` |  | Server IPv6 address (without the mask) |
-
+| Variable                   | Default | Description                                  |
+| -------------------------- | :-----: | -------------------------------------------- |
+| `tunnelbroker_interface`   |  `sit1` | Network interface name                       |
+| `tunnelbroker_defaultgw`   |  `true` | Route all IPv6 traffic through tunnel broker |
+| `tunnelbroker_client_ipv6` |         | Client IPv6 addresss with the mask           |
+| `tunnelbroker_client_ipv6` |         | Server IPv4 address                          |
+| `tunnelbroker_server_ipv6` |         | Server IPv6 address (without the mask)       |
 
 ## unnatended upgrades
 
@@ -227,8 +294,8 @@ $ ansible-galaxy install escapace.unattended-upgrades
 
 ### Variables
 
-| Variable | Default | Description |
-| --- |  :---: | --- |
+| Variable                             |   Default  | Description                                                                                                                |
+| ------------------------------------ | :--------: | -------------------------------------------------------------------------------------------------------------------------- |
 | `unattended_upgrades_yum_update_cmd` | `security` | Update kind (default, security, security-severity:critical, minimal, minimal-security, minimal-security-severity:critical) |
 
 ## virtualbox
@@ -243,9 +310,9 @@ $ ansible-galaxy install escapace.virtualbox
 
 ### Variables
 
-| Variable | Default | Description |
-| --- |  :---: | --- |
-| `virtualbox_version` | `5.1` | VirtualBox version |
+| Variable             | Default | Description        |
+| -------------------- | :-----: | ------------------ |
+| `virtualbox_version` |  `5.1`  | VirtualBox version |
 
 # License
 
