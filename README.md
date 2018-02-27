@@ -27,6 +27,8 @@ Docker configuration tailored for the enterprise linux operating system.
 $ ansible-galaxy install escapace.docker
 ```
 
+### Variables
+
 | Variable | Default | Description |
 | --- |  :---: | --- |
 | `docker_lvm_data_volume_size` | `95%VG` | Docker LVM volume size |
@@ -49,6 +51,13 @@ Drop-in user-space, user-agnostic zsh; tmux; git &c configuration. \[[4](https:/
 ```sh
 $ ansible-galaxy install escapace.dotfiles
 ```
+### Variables
+
+| Variable | Default | Description |
+| --- |  :---: | --- |
+| `dotfiles_username` | | Username |
+| `dotfiles_key` | | OpenSSH publick key |
+| `dotfiles_keyboard_interactive_group` | | OpenSSH keyboard interactive group |
 
 
 ## duo_unix
@@ -60,6 +69,20 @@ Two factor, keyboard interactive OpenSSH and PAM authentication for users in a p
 ```sh
 $ ansible-galaxy install escapace.duo_unix
 ```
+
+### Variables
+
+| Variable | Default | Description |
+| --- |  :---: | --- |
+| `duo_unix_duo_ikey` | | Duo Security integration key |
+| `duo_unix_duo_skey` | | Duo Security secret key |
+| `duo_unix_duo_host` | | Duo Security API hostname |
+| `duo_unix_groups` | | Comma-separated list of groups |
+| `duo_unix_duo_pushinfo` | `no` | Include information in the Duo Push message |
+| `duo_unix_duo_failmode` | `secure` | fail "safe" (allow access) or "secure" (deny access) |
+| `duo_unix_duo_prompts` | `3` | Maximum number of prompts before denying access |
+| `duo_unix_autopush` | `no` | automatically send a push login request |
+
 
 ## epel
 
