@@ -134,6 +134,13 @@ A declarative LVM partitioner solution. The partition layout is described in a d
 $ ansible-galaxy install escapace.lvm
 ```
 
+### Variables
+
+| Variable | Default | Description |
+| --- |  :---: | --- |
+| `lvm_volume_group_name` | `default` | Volume group name |
+| `lvm_physical_device` | | Physical device such as `/dev/xvdb` |
+
 ## ntp
 
 Ansible role for the chrony \[[10](https://chrony.tuxfamily.org "chrony")] network time protocol daemon.
@@ -143,6 +150,13 @@ Ansible role for the chrony \[[10](https://chrony.tuxfamily.org "chrony")] netwo
 ```sh
 $ ansible-galaxy install escapace.ntp
 ```
+
+### Variables
+
+| Variable | Default | Description |
+| --- |  :---: | --- |
+| `ntp_server_options` | `iburst` | Server options |
+| `ntp_stratumweight` | `0.001` | How important is stratum when selecting source |
 
 ## packagecloud
 
@@ -164,6 +178,12 @@ Ansible role for OpenSSH configuration implementing Mozilla’s OpenSSH security
 $ ansible-galaxy install escapace.ssh
 ```
 
+### Variables
+
+| Variable | Default | Description |
+| --- |  :---: | --- |
+| `ssh_keyboard_interactive_group` | `kbd-interactive` | OpenSSH keyboard interactive group |
+
 ## sudo
 
 Ansible role implementing sensible sudo defaults.
@@ -183,6 +203,17 @@ Ansible role for Hurricane Electric’s IPv6 tunnel broker.
 ```sh
 $ ansible-galaxy install escapace.tunnelbroker
 ```
+
+### Variables
+
+| Variable | Default | Description |
+| --- |  :---: | --- |
+| `tunnelbroker_interface` | `sit1` | Network interface name |
+| `tunnelbroker_defaultgw` | `true` | Route all IPv6 traffic through tunnel broker |
+| `tunnelbroker_client_ipv6` |  | Client IPv6 addresss with the mask |
+| `tunnelbroker_client_ipv6` |  | Server IPv4 address |
+| `tunnelbroker_server_ipv6` |  | Server IPv6 address (without the mask) |
+
 
 ## unnatended upgrades
 
