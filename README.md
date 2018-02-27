@@ -7,6 +7,7 @@ Production ready, continuously tested collection of [Ansible](https://ansible.co
 Centos and RHEL operating systems.
 
 -   Python 3 support
+-   Tracking most recent major Ansible release
 -   Namespaced role variables
 -   Continously tested on Docker, AWS EC2 and baremetal \[[1](https://travis-ci.org/escapace/ansible-roles),[2](https://travis-ci.org/escapace/stack "Travis CI")]
 
