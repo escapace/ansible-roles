@@ -225,6 +225,12 @@ Ansible role implementing unnatended security update policy.
 $ ansible-galaxy install escapace.unattended-upgrades
 ```
 
+### Variables
+
+| Variable | Default | Description |
+| --- |  :---: | --- |
+| `unattended_upgrades_yum_update_cmd` | `security` | Update kind (default, security, security-severity:critical, minimal, minimal-security, minimal-security-severity:critical) |
+
 ## virtualbox
 
 Ansible role for Oracle VM VirtualBox hypervisor.
@@ -234,6 +240,12 @@ Ansible role for Oracle VM VirtualBox hypervisor.
 ```sh
 $ ansible-galaxy install escapace.virtualbox
 ```
+
+### Variables
+
+| Variable | Default | Description |
+| --- |  :---: | --- |
+| `virtualbox_version` | `5.1` | VirtualBox version |
 
 # License
 
