@@ -20,7 +20,7 @@ env:
 
 script:
   - sudo pip install docker-py
-  - pip install docker-py ansible==2.4.0.0
+  - pip install docker-py ansible==2.5.3
   - ansible --version
   - gpg --keyserver ha.pool.sks-keyservers.net --recv-key 13F26F82E955B8B8CE469054F29CCEBC83FD4525
   - ./manage ci

@@ -1,2 +1,3 @@
 .vagrant
 .manage_modules
+.python-version
