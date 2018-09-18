@@ -20,7 +20,7 @@ env:
 
 script:
   - sudo pip install docker-py
-  - pip install docker-py ansible==2.5.3
+  - pip install docker-py ansible==2.6.4
   - ansible --version
   - ./manage trust-escapace
   - ./manage ci
