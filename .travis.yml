@@ -16,7 +16,6 @@ env:
   - TEST_SUITE=escapace.sudo
   - TEST_SUITE=escapace.tunnelbroker
   - TEST_SUITE=escapace.unattended-upgrades
-  - TEST_SUITE=escapace.virtualbox
 
 script:
   - sudo pip install docker-py
