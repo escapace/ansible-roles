@@ -1,33 +1,32 @@
 language: python
 python:
-  - "3.6"
+- '3.6'
 services: docker
 env:
-  - TEST_SUITE=escapace.dotfiles
-  - TEST_SUITE=escapace.docker
-  - TEST_SUITE=escapace.duo_unix
-  - TEST_SUITE=escapace.epel
-  - TEST_SUITE=escapace.ferm
-  - TEST_SUITE=escapace.logrotate
-  - TEST_SUITE=escapace.lvm
-  - TEST_SUITE=escapace.ntp
-  - TEST_SUITE=escapace.packagecloud
-  - TEST_SUITE=escapace.ssh
-  - TEST_SUITE=escapace.sudo
-  - TEST_SUITE=escapace.tunnelbroker
-  - TEST_SUITE=escapace.unattended-upgrades
-
+- TEST_SUITE=escapace.dotfiles
+- TEST_SUITE=escapace.docker
+- TEST_SUITE=escapace.duo_unix
+- TEST_SUITE=escapace.epel
+- TEST_SUITE=escapace.ferm
+- TEST_SUITE=escapace.logrotate
+- TEST_SUITE=escapace.lvm
+- TEST_SUITE=escapace.ntp
+- TEST_SUITE=escapace.packagecloud
+- TEST_SUITE=escapace.ssh
+- TEST_SUITE=escapace.sudo
+- TEST_SUITE=escapace.tunnelbroker
+- TEST_SUITE=escapace.unattended-upgrades
 script:
-  - sudo pip install docker-py
-  - pip install docker ansible==2.7.0
-  - ./manage trust-escapace
-  - ./manage ci
-
+- sudo pip install docker-py
+- pip install docker ansible==2.7.0
+- "./manage trust-escapace"
+- "./manage ci"
 notifications:
-  email:
+  email: false
+  slack:
     on_success: change
     on_failure: always
-
+    secure: nzetv2RIVxl3oC/G+71QGPAzR3lXORu6CJy1jvkDUKvUgfSNRZ685DooWzu7cG9GhulMWAiK3vG43j2cPGeEgc+pYi6zcLTPoRs0/qhe6Sca5mVYi/LD+N48a7tv6SdbiaKXOlNoqGuuFjWJ6gOab7hKESAqtUXNWdI1T9tqmnZdkIyFwiO4QNDVys1aEBl3PeteFAWPJ/QJzUK80EJRNk4r22CIK/25yttAm9Z6LOTMA04ghdNCZnadjcDVoUdVOI3MX/iKKxnOfUJrJajgUOENHiEHQ88r8FUp1EvtyDmCAZqdQ3zFp7d+KYKdrkINH69HO2yM4ssVlafxImjRBnmIx9/YoDIviXCezWD3eQronAr+8tUBSc6jzLGK+6VpbcdE2vHwwZeB0xe72dg5+tfWHG8a+5+fB57FX3raQ13ImJaXEHH4LfOt6Vfv7Zt6RWVdNCtDZdxJKLXbA+JKeRGzwSAk0u+K7mREu2cGTQW7nerGr262wACIyjYMfQH+krL/zvffDIVDSjdyrz5n6R+/jKe+nS+40jkROUjBo/8cmzHYRBbiM3M0zmT5fNOghaQB+WG2nRrKAn+L6lQLCPRrGwWX57QYMEVtJomxjdYNQzcVNTt33gH6xUiF7X72D+/pxIsZcrEBqw03oeG67m462N57GLWNK7VG1ddGJec=
 branches:
   only:
   - master
