@@ -1,12 +1,3 @@
-directories:
-  script: scripts
-  module: scripts/modules
-  test: scripts/tests
-
-# Environment variables
-env:
-  HELLO: "Hello World!"
-
 # Enable manage repository scripts
 enable:
   - help
