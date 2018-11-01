@@ -4,7 +4,7 @@
 # @import console/error
 # @import console/info
 # @import console/warn
-# @import github.com/escapace/stack-tools/docker/dockerBuild
+# @import github.com/escapace/stack-tools docker/dockerBuild
 
 declare -A CI_RESULTS
 
