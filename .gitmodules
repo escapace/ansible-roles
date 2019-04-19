@@ -40,3 +40,6 @@
 [submodule "roles/escapace.dotfiles"]
 	path = roles/escapace.dotfiles
 	url = https://github.com/escapace/ansible-dotfiles.git
+[submodule "roles/escapace.fastd"]
+	path = roles/escapace.fastd
+	url = https://github.com/escapace/ansible-fastd.git
