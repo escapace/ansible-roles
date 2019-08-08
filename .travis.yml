@@ -18,7 +18,7 @@ env:
 - TEST_SUITE=escapace.unattended-upgrades
 script:
 - sudo pip install docker-py
-- pip install docker ansible==2.7.0
+- pip install docker ansible==2.8.3
 - "./manage trust-escapace"
 - "./manage ci"
 notifications:
