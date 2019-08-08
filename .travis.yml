@@ -1,3 +1,8 @@
+dist: xenial
+addons:
+  apt:
+    packages:
+    - dirmngr
 language: python
 python:
 - '3.6'
