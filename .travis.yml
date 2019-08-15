@@ -23,7 +23,7 @@ env:
 - TEST_SUITE=escapace.tunnelbroker
 - TEST_SUITE=escapace.unattended-upgrades
 script:
-- pip install -r requirements.txt
+- sudo pip install -r requirements.txt
 - "./manage trust-escapace"
 - "./manage ci"
 notifications:
