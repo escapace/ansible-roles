@@ -43,3 +43,9 @@
 [submodule "roles/escapace.fastd"]
 	path = roles/escapace.fastd
 	url = https://github.com/escapace/ansible-fastd.git
+[submodule "roles/escapace.openvpn"]
+	path = roles/escapace.openvpn
+	url = https://github.com/escapace/ansible-openvpn.git
+[submodule "roles/escapace.dummy"]
+	path = roles/escapace.dummy
+	url = https://github.com/escapace/ansible-dummy
