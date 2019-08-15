@@ -57,6 +57,9 @@ $ ansible-galaxy install escapace.docker
 | `docker_edition`              |        `ce`       | Docker edition                                     |
 | `docker_gc_install`           |       `true`      | Docker garbage collection of containers and images |
 | `docker_selinux_enabled`      |       `true`      | Docker SELinux support                             |
+| `docker_ipv4_dmz`             |       `[]`        | List of IPv4 networks to to include in DMZ         |
+| `docker_ipv6_dmz`             |       `[]`        | List of IPv6 networks to to include in DMZ         |
+
 
 ## dotfiles
 
@@ -125,11 +128,11 @@ $ ansible-galaxy install escapace.ferm
 
 ### Variables
 
-| Variable               | Default | Description                  |
-| ---------------------- | :-----: | ---------------------------- |
-| `ferm_ipv4_forwarding` |   `1`   | Enable IPv4 forwarding       |
-| `ferm_ipv6_forwarding` |   `1`   | Enable IPv6 forwarding       |
-| `ferm_ipv6_accept_ra`  |   `0`   | Accept router advertisements |
+| Variable               | Default    | Description                  |
+| ---------------------- | :--------: | ---------------------------- |
+| `ferm_ipv4_forwarding` |   `true`   | Enable IPv4 forwarding       |
+| `ferm_ipv6_forwarding` |   `true`   | Enable IPv6 forwarding       |
+| `ferm_ipv6_accept_ra`  |   `false`  | Accept router advertisements |
 
 ## logrotate
 
@@ -261,7 +264,7 @@ $ ansible-galaxy install escapace.virtualbox
 
 | Variable             | Default | Description        |
 | -------------------- | :-----: | ------------------ |
-| `virtualbox_version` |  `5.1`  | VirtualBox version |
+| `virtualbox_version` |  `5.2`  | VirtualBox version |
 
 # License
 
