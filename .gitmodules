@@ -49,3 +49,6 @@
 [submodule "roles/escapace.dummy"]
 	path = roles/escapace.dummy
 	url = https://github.com/escapace/ansible-dummy
+[submodule "roles/escapace.unbound"]
+	path = roles/escapace.unbound
+	url = https://github.com/escapace/ansible-unbound
