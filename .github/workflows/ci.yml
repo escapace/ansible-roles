@@ -24,6 +24,8 @@ jobs:
       run: pip3 install -r requirements.txt
     - name: Run molecule test
       run: |
+        molecule --version
+        python3 --version
         export ANSIBLE_ROLES_PATH="$(readlink -f "./roles")"
         cd roles/${{ matrix.role }}
         molecule test
