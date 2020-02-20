@@ -8,8 +8,20 @@ jobs:
     strategy:
       matrix:
         role:
-          - escapace.epel
-          - escapace.sudo
+        - escapace.docker
+        - escapace.dotfiles
+        - escapace.dummy
+        - escapace.duo_unix
+        - escapace.epel
+        - escapace.ferm
+        - escapace.kresd
+        - escapace.logrotate
+        - escapace.lvm
+        - escapace.ntp
+        - escapace.packagecloud
+        - escapace.ssh
+        - escapace.sudo
+        - escapace.unattended-upgrades
     steps:
     - name: Setup Python environment
       uses: actions/setup-python@v1.1.1
