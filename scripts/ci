@@ -4,6 +4,7 @@
 # @import console/error
 # @import console/info
 # @import console/warn
+# @import path/relativePath 
 # @import github.com/escapace/stack-tools docker/dockerBuild
 
 declare -A CI_RESULTS
@@ -12,17 +13,33 @@ testRole () {
     local directory="$1"
     local name
     local code=0
+    local role
 
     name="$(basename "${1}")"
 
     cd "${directory}" || _ die "${directory} does not exist"
 
-    ansible-galaxy install --force -r tests/requirements.yml -p tests/roles/ >& /dev/null || {
-        _ warn "${name}: failed to install reqirements"
-        code=1
-    }
+    # mkdir -p "${directory}/tests/roles"
 
-    # ansible-playbook -i tests/inventory tests/test.yml --syntax-check
+    cd "${directory}/tests/roles" || _ die "${directory}/tests/roles does not exist"
+
+    while read -d '' -r role
+    do
+        if [[ "$(basename ${role})" != "${name}" ]]
+        then
+             
+            ln -f -s "$(_ relativePath "${role}" "$(pwd)")" "$(basename ${role})"
+        fi
+    done < <(find "${MANAGE_REPOSITORY}/roles" -type d -mindepth 1 -maxdepth 1 -print0 2> /dev/null)
+
+    cd "${directory}" || _ die "${directory} does not exist"
+
+    # ansible-galaxy install --force -r tests/requirements.yml -p tests/roles/ >& /dev/null || {
+    #     _ warn "${name}: failed to install reqirements"
+    #     code=1
+    # }
+
+    ansible-playbook -i tests/inventory tests/test.yml --syntax-check
 
     ansible-playbook -i tests/inventory tests/test.yml || {
         code=1

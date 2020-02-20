@@ -13,9 +13,6 @@
 [submodule "roles/packagecloud"]
 	path = roles/escapace.packagecloud
 	url = https://github.com/escapace/ansible-packagecloud.git
-[submodule "roles/tunnelbroker"]
-	path = roles/escapace.tunnelbroker
-	url = https://github.com/escapace/ansible-tunnelbroker.git
 [submodule "roles/ntp"]
 	path = roles/escapace.ntp
 	url = https://github.com/escapace/ansible-ntp
@@ -40,15 +37,9 @@
 [submodule "roles/escapace.dotfiles"]
 	path = roles/escapace.dotfiles
 	url = https://github.com/escapace/ansible-dotfiles.git
-[submodule "roles/escapace.fastd"]
-	path = roles/escapace.fastd
-	url = https://github.com/escapace/ansible-fastd.git
-[submodule "roles/escapace.openvpn"]
-	path = roles/escapace.openvpn
-	url = https://github.com/escapace/ansible-openvpn.git
 [submodule "roles/escapace.dummy"]
 	path = roles/escapace.dummy
 	url = https://github.com/escapace/ansible-dummy
-[submodule "roles/escapace.unbound"]
-	path = roles/escapace.unbound
-	url = https://github.com/escapace/ansible-unbound
+[submodule "roles/escapace.kresd"]
+	path = roles/escapace.kresd
+	url = https://github.com/escapace/ansible-kresd.git
