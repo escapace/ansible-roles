@@ -1,7 +1,7 @@
 # Ansible Roles
 
-[![build status](https://travis-ci.org/escapace/ansible-roles.svg?branch=master)](https://travis-ci.org/escapace/ansible-roles)
-[![license](https://img.shields.io/github/license/escapace/ansible-roles.svg)](<>)
+![CI](https://github.com/escapace/ansible-roles/workflows/CI/badge.svg)
+![license](https://img.shields.io/github/license/escapace/ansible-roles.svg)
 
 Production ready, continuously tested collection of [Ansible](https://ansible.com) roles targeting
 Centos and RHEL operating systems.
