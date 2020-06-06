@@ -43,3 +43,18 @@
 [submodule "roles/escapace.kresd"]
 	path = roles/escapace.kresd
 	url = https://github.com/escapace/ansible-kresd.git
+[submodule "roles/escapace.aws-cloudwatch"]
+	path = roles/escapace.aws-cloudwatch
+	url = https://github.com/escapace/ansible-aws-cloudwatch.git
+[submodule "roles/escapace.swap"]
+	path = roles/escapace.swap
+	url = https://github.com/escapace/ansible-swap.git
+[submodule "roles/escapace.tuned"]
+	path = roles/escapace.tuned
+	url = https://github.com/escapace/ansible-tuned.git
+[submodule "roles/escapace.tunnelbroker"]
+	path = roles/escapace.tunnelbroker
+	url = https://github.com/escapace/ansible-tunnelbroker.git
+[submodule "roles/escapace.wireguard"]
+	path = roles/escapace.wireguard
+	url = https://github.com/escapace/ansible-wireguard.git
