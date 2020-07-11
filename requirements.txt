@@ -1,6 +1,6 @@
 ansible==2.9.10
 ansible-lint
 yamllint
-molecule==3.0.4
+molecule==3.0.5
 docker
 netaddr
