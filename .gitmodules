@@ -26,7 +26,7 @@
 	path = roles/escapace.logrotate
 	url = https://github.com/escapace/ansible-logrotate.git
 [submodule "roles/unattended-upgrades"]
-	path = roles/escapace.unattended-upgrades
+	path = roles/escapace.unattended_upgrades
 	url = https://github.com/escapace/ansible-unattended-upgrades.git
 [submodule "roles/duo_unix"]
 	path = roles/escapace.duo_unix
@@ -44,7 +44,7 @@
 	path = roles/escapace.kresd
 	url = https://github.com/escapace/ansible-kresd.git
 [submodule "roles/escapace.aws-cloudwatch"]
-	path = roles/escapace.aws-cloudwatch
+	path = roles/escapace.aws_cloudwatch
 	url = https://github.com/escapace/ansible-aws-cloudwatch.git
 [submodule "roles/escapace.swap"]
 	path = roles/escapace.swap
