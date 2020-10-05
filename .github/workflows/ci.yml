@@ -9,7 +9,7 @@ jobs:
       fail-fast: false
       matrix:
         role:
-        - escapace.aws-cloudwatch
+        - escapace.aws_cloudwatch
         - escapace.docker
         - escapace.dotfiles
         - escapace.dummy
@@ -25,19 +25,21 @@ jobs:
         - escapace.sudo
         - escapace.tuned
         - escapace.tunnelbroker
-        - escapace.unattended-upgrades
+        - escapace.unattended_upgrades
         # - escapace.virtualbox
         # - escapace.wireguard
     steps:
+    - uses: actions/cache@v2
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
     - name: Setup Python environment
       uses: actions/setup-python@v1.1.1
-    - uses: actions/checkout@v2.0.0
-    - name: Checkout submodules
-      shell: bash
-      run: |
-        auth_header="$(git config --local --get http.https://github.com/.extraheader)"
-        git submodule sync --recursive
-        git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+    - uses: actions/checkout@v2
+      with:
+        submodules: 'recursive'
     - name: Install requirements
       run: pip3 install -r requirements.txt
     - name: Run molecule test
