@@ -1,0 +1,3 @@
+dotfiles_keyboard_interactive_group: kbd_interactive
+ssh_keyboard_interactive_group: kbd_interactive
+duo_unix_groups: kbd_interactive

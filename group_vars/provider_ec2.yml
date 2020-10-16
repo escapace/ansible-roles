@@ -1,0 +1,6 @@
+---
+
+dotfiles_username: ec2-user
+lvm_physical_device: /dev/xvdb
+normalize_username: ec2-user
+provider: ec2

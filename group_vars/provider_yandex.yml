@@ -1,0 +1,7 @@
+---
+
+dotfiles_username: yandex-user
+lvm_physical_device: /dev/vdb
+normalize_username: yandex-user
+provider: yandex
+kresd_ipv6: false

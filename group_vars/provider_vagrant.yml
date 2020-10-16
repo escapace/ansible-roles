@@ -1,0 +1,9 @@
+---
+
+provider: vagrant
+docker_storage_driver: vfs
+dotfiles_key: https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant.pub
+dotfiles_username: vagrant
+lvm_physical_device: ""
+normalize_username: vagrant
+kresd_ipv6: false

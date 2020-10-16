@@ -58,3 +58,6 @@
 [submodule "roles/escapace.wireguard"]
 	path = roles/escapace.wireguard
 	url = https://github.com/escapace/ansible-wireguard.git
+[submodule "roles/escapace.normalize"]
+	path = roles/escapace.normalize
+	url = https://github.com/escapace/ansible-normalize.git
