@@ -63,4 +63,4 @@
 	url = https://github.com/escapace/ansible-normalize.git
 [submodule "roles/escapace.tor"]
 	path = roles/escapace.tor
-	url = https://github.com/l5x/ansible-tor.git
+	url = https://github.com/escapace/ansible-tor.git
