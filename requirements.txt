@@ -4,3 +4,4 @@ yamllint==1.25.0
 molecule==3.0.8
 docker
 netaddr
+segno==1.3.1
