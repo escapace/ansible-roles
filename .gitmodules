@@ -64,3 +64,6 @@
 [submodule "roles/escapace.tor"]
 	path = roles/escapace.tor
 	url = https://github.com/escapace/ansible-tor.git
+[submodule "roles/escapace.bootstrap"]
+	path = roles/escapace.bootstrap
+	url = https://github.com/escapace/ansible-bootstrap.git
