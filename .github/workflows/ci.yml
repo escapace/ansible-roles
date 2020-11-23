@@ -19,10 +19,13 @@ jobs:
         - escapace.kresd
         - escapace.logrotate
         - escapace.lvm
+        # - escapace.normalize
         - escapace.ntp
         - escapace.packagecloud
         - escapace.ssh
         - escapace.sudo
+        - escapace.swap
+        # - escapace.tor
         - escapace.tuned
         - escapace.tunnelbroker
         - escapace.unattended_upgrades
