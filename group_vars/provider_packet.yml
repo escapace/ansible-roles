@@ -1,6 +1,0 @@
----
-
-provider: packet
-dotfiles_username: packet-user
-normalize_username: packet-user
-lvm_physical_device: /dev/dm-0
