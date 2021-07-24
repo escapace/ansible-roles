@@ -1,4 +1,4 @@
 molecule-docker==0.3.3
-ansible-lint==5.1.1
+ansible-lint==5.1.2
 yamllint==1.26.1
 molecule==3.3.4
