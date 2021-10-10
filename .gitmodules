@@ -27,7 +27,7 @@
 	url = https://github.com/escapace/ansible-logrotate.git
 [submodule "roles/unattended-upgrades"]
 	path = roles/escapace.unattended_upgrades
-	url = https://github.com/escapace/ansible-unattended-upgrades.git
+	url = https://github.com/escapace/ansible-unattended_upgrades.git
 [submodule "roles/duo_unix"]
 	path = roles/escapace.duo_unix
 	url = https://github.com/escapace/ansible-duo_unix.git

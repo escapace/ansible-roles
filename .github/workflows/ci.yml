@@ -1,4 +1,4 @@
-name: CI
+name: ci
 
 on: [push]
 
@@ -38,16 +38,16 @@ jobs:
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements*.txt') }}
         restore-keys: |
           ${{ runner.os }}-pip-
-    - name: Setup Python environment
+    - name: setup python environment
       uses: actions/setup-python@v2.2.2
     - uses: actions/checkout@v2
       with:
         submodules: 'recursive'
-    - name: Install requirements
+    - name: install requirements
       run: |
         pip3 install -r requirements.txt
         pip3 install -r requirements-dev.txt
-    - name: Run molecule test
+    - name: run molecule test
       run: |
         molecule --version
         python3 --version
