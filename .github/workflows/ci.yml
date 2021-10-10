@@ -1,7 +1,17 @@
-name: ci
-
-on: [push]
-
+name: test
+on:
+  push:
+    branches:
+      - trunk
+    paths-ignore:
+      - README.md
+      - LICENSE
+  pull_request:
+    branches:
+      - trunk
+    paths-ignore:
+      - README.md
+      - LICENSE
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -32,6 +42,12 @@ jobs:
         # - escapace.virtualbox
         # - escapace.wireguard
     steps:
+    - name: docker login
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     - uses: actions/cache@v2.1.6
       with:
         path: ~/.cache/pip
