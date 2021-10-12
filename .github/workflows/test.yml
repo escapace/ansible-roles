@@ -31,13 +31,12 @@ jobs:
         - escapace.lvm
         # - escapace.normalize
         - escapace.ntp
-        - escapace.packagecloud
         - escapace.ssh
         - escapace.sudo
         - escapace.swap
         # - escapace.tor
         - escapace.tuned
-        - escapace.tunnelbroker
+        # - escapace.tunnelbroker
         - escapace.unattended_upgrades
         # - escapace.virtualbox
         # - escapace.wireguard
