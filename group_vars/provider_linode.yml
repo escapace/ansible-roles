@@ -1,7 +1,7 @@
 ---
 
 dotfiles_username: linode-user
-lvm_physical_device: /dev/sdc
+storage_setup_physical_device: /dev/sdc
 normalize_username: linode-user
 provider: linode
 

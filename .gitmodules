@@ -4,9 +4,6 @@
 [submodule "roles/epel"]
 	path = roles/escapace.epel
 	url = https://github.com/escapace/ansible-epel
-[submodule "roles/lvm"]
-	path = roles/escapace.lvm
-	url = https://github.com/escapace/ansible-lvm.git
 [submodule "roles/ferm"]
 	path = roles/escapace.ferm
 	url = https://github.com/escapace/ansible-ferm
@@ -73,3 +70,12 @@
 [submodule "roles/escapace.aws_nat_instance"]
 	path = roles/escapace.aws_nat_instance
 	url = https://github.com/escapace/ansible-aws_nat_instance.git
+[submodule "roles/escapace.consul"]
+	path = roles/escapace.consul
+	url = https://github.com/escapace/ansible-consul.git
+[submodule "roles/escapace.lvm"]
+	path = roles/escapace.lvm
+	url = https://github.com/escapace/ansible-storage_setup
+[submodule "roles/escapace.storage_setup"]
+	path = roles/escapace.storage_setup
+	url = https://github.com/escapace/ansible-storage_setup
