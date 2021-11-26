@@ -73,9 +73,6 @@
 [submodule "roles/escapace.consul"]
 	path = roles/escapace.consul
 	url = https://github.com/escapace/ansible-consul.git
-[submodule "roles/escapace.lvm"]
-	path = roles/escapace.lvm
-	url = https://github.com/escapace/ansible-storage_setup
 [submodule "roles/escapace.storage_setup"]
 	path = roles/escapace.storage_setup
 	url = https://github.com/escapace/ansible-storage_setup
