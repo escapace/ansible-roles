@@ -7,9 +7,6 @@
 [submodule "roles/ferm"]
 	path = roles/escapace.ferm
 	url = https://github.com/escapace/ansible-ferm
-[submodule "roles/packagecloud"]
-	path = roles/escapace.packagecloud
-	url = https://github.com/escapace/ansible-packagecloud.git
 [submodule "roles/ntp"]
 	path = roles/escapace.ntp
 	url = https://github.com/escapace/ansible-ntp
@@ -19,9 +16,6 @@
 [submodule "roles/ssh"]
 	path = roles/escapace.ssh
 	url = https://github.com/escapace/ansible-ssh.git
-[submodule "roles/logrotate"]
-	path = roles/escapace.logrotate
-	url = https://github.com/escapace/ansible-logrotate.git
 [submodule "roles/unattended-upgrades"]
 	path = roles/escapace.unattended_upgrades
 	url = https://github.com/escapace/ansible-unattended_upgrades.git
