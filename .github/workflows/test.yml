@@ -19,7 +19,7 @@ jobs:
       fail-fast: false
       matrix:
         role:
-        - escapace.aws_cloudwatch
+        # - escapace.aws_cloudwatch
         - escapace.docker
         - escapace.dotfiles
         - escapace.dummy
