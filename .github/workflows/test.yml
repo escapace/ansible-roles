@@ -27,7 +27,6 @@ jobs:
         - escapace.epel
         - escapace.ferm
         - escapace.kresd
-        - escapace.logrotate
         - escapace.storage_setup
         # - escapace.normalize
         - escapace.ntp
