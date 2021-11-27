@@ -1,4 +1,4 @@
 ansible==4.8.0
 docker
 netaddr
-segno==1.4.0
+segno==1.4.1
