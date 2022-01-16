@@ -53,7 +53,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-pip-
     - name: setup python environment
-      uses: actions/setup-python@v2.3.0
+      uses: actions/setup-python@v2.3.1
     - uses: actions/checkout@v2
       with:
         submodules: 'recursive'
