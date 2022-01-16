@@ -70,3 +70,24 @@
 [submodule "roles/escapace.storage_setup"]
 	path = roles/escapace.storage_setup
 	url = https://github.com/escapace/ansible-storage_setup
+[submodule "roles/escapace.nomad"]
+	path = roles/escapace.nomad
+	url = https://github.com/escapace/ansible-nomad.git
+[submodule "roles/escapace.tailscale"]
+	path = roles/escapace.tailscale
+	url = https://github.com/escapace/ansible-tailscale.git
+[submodule "roles/escapace.gomplate"]
+	path = roles/escapace.gomplate
+	url = https://github.com/escapace/ansible-gomplate.git
+[submodule "roles/escapace.aws_ec2_environment"]
+	path = roles/escapace.aws_ec2_environment
+	url = https://github.com/escapace/ansible-aws_ec2_environment.git
+[submodule "roles/escapace.retry"]
+	path = roles/escapace.retry
+	url = https://github.com/escapace/ansible-retry.git
+[submodule "roles/escapace.aws_environment"]
+	path = roles/escapace.aws_environment
+	url = https://github.com/escapace/ansible-aws_environment.git
+[submodule "roles/escapace.cni"]
+	path = roles/escapace.cni
+	url = https://github.com/escapace/ansible-cni.git
