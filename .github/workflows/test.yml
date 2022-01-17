@@ -20,6 +20,9 @@ jobs:
       matrix:
         role:
         # - escapace.aws_cloudwatch
+        - escapace.aws_cli
+        - escapace.cni
+        - escapace.gomplate
         - escapace.docker
         - escapace.dotfiles
         - escapace.dummy
