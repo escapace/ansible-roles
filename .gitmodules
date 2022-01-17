@@ -89,5 +89,5 @@
 	path = roles/escapace.cni
 	url = https://github.com/escapace/ansible-cni.git
 [submodule "escapace.tailscale"]
-	path = escapace.tailscale
+	path = roles/escapace.tailscale
 	url = https://github.com/escapace/ansible-tailscale.git
