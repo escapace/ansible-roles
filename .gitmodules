@@ -91,3 +91,6 @@
 [submodule "roles/escapace.nomad"]
 	path = roles/escapace.nomad
 	url = https://github.com/escapace/ansible-nomad.git
+[submodule "roles/escapace.datadog"]
+	path = roles/escapace.datadog
+	url = https://github.com/escapace/ansible-datadog.git
