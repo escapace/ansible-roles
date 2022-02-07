@@ -34,9 +34,6 @@
 [submodule "roles/escapace.kresd"]
 	path = roles/escapace.kresd
 	url = https://github.com/escapace/ansible-kresd.git
-[submodule "roles/escapace.aws-cloudwatch"]
-	path = roles/escapace.aws_cloudwatch
-	url = https://github.com/escapace/ansible-aws-cloudwatch.git
 [submodule "roles/escapace.swap"]
 	path = roles/escapace.swap
 	url = https://github.com/escapace/ansible-swap.git
@@ -76,9 +73,6 @@
 [submodule "roles/escapace.aws_ec2_environment"]
 	path = roles/escapace.aws_ec2_environment
 	url = https://github.com/escapace/ansible-aws_ec2_environment.git
-[submodule "roles/escapace.retry"]
-	path = roles/escapace.retry
-	url = https://github.com/escapace/ansible-retry.git
 [submodule "roles/escapace.aws_environment"]
 	path = roles/escapace.aws_environment
 	url = https://github.com/escapace/ansible-aws_environment.git
@@ -94,3 +88,12 @@
 [submodule "roles/escapace.datadog"]
 	path = roles/escapace.datadog
 	url = https://github.com/escapace/ansible-datadog.git
+[submodule "roles/escapace.observability"]
+	path = roles/escapace.observability
+	url = https://github.com/escapace/ansible-observability.git
+[submodule "roles/escapace.escapace_releases"]
+	path = roles/escapace.escapace_releases
+	url = https://github.com/escapace/ansible-escapace_releases.git
+[submodule "roles/escapace.envoy"]
+	path = roles/escapace.envoy
+	url = https://github.com/escapace/ansible-envoy.git
