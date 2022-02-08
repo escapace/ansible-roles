@@ -19,31 +19,33 @@ jobs:
       fail-fast: false
       matrix:
         role:
-        # - escapace.aws_cloudwatch
-        - escapace.datadog
-        - escapace.nomad
-        - escapace.tailscale
-        - escapace.consul
         - escapace.aws_cli
         - escapace.cni
-        - escapace.gomplate
+        - escapace.consul
         - escapace.docker
         - escapace.dotfiles
         - escapace.dummy
         - escapace.duo_unix
         - escapace.epel
+        - escapace.escapace_releases
+        - escapace.fedora_releases
         - escapace.ferm
+        - escapace.gomplate
         - escapace.kresd
-        - escapace.storage_setup
-        # - escapace.normalize
+        - escapace.nomad
         - escapace.ntp
         - escapace.ssh
+        - escapace.storage_setup
         - escapace.sudo
         - escapace.swap
-        # - escapace.tor
+        - escapace.tailscale
         - escapace.tuned
-        # - escapace.tunnelbroker
         - escapace.unattended_upgrades
+        # - escapace.aws_cloudwatch
+        # - escapace.datadog
+        # - escapace.normalize
+        # - escapace.tor
+        # - escapace.tunnelbroker
         # - escapace.virtualbox
         # - escapace.wireguard
     steps:
