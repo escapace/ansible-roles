@@ -26,6 +26,7 @@ jobs:
         - escapace.dotfiles
         - escapace.dummy
         - escapace.duo_unix
+        - escapace.envoy
         - escapace.epel
         - escapace.escapace_releases
         - escapace.fedora_releases
