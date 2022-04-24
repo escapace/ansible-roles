@@ -35,6 +35,7 @@ jobs:
         - escapace.kresd
         - escapace.nomad
         - escapace.ntp
+        - escapace.observability
         - escapace.ssh
         - escapace.storage_setup
         - escapace.sudo
