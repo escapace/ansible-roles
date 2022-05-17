@@ -103,3 +103,6 @@
 [submodule "roles/escapace.cloudflared"]
 	path = roles/escapace.cloudflared
 	url = https://github.com/escapace/ansible-cloudflared.git
+[submodule "roles/escapace.newrelic"]
+	path = roles/escapace.newrelic
+	url = https://github.com/escapace/ansible-newrelic.git

@@ -34,6 +34,7 @@ jobs:
         - escapace.ferm
         - escapace.gomplate
         - escapace.kresd
+        - escapace.newrelic
         - escapace.nomad
         - escapace.ntp
         - escapace.observability
