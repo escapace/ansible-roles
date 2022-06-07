@@ -45,6 +45,7 @@ jobs:
         - escapace.tailscale
         - escapace.tuned
         - escapace.unattended_upgrades
+        - escapace.vault
         # - escapace.aws_cloudwatch
         # - escapace.datadog
         # - escapace.normalize
