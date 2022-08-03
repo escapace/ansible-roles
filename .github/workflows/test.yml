@@ -30,7 +30,6 @@ jobs:
         - escapace.envoy
         - escapace.epel
         - escapace.escapace_releases
-        - escapace.fedora_releases
         - escapace.ferm
         - escapace.gomplate
         - escapace.kresd

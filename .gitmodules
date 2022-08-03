@@ -97,9 +97,6 @@
 [submodule "roles/escapace.envoy"]
 	path = roles/escapace.envoy
 	url = https://github.com/escapace/ansible-envoy.git
-[submodule "roles/escapace.fedora_releases"]
-	path = roles/escapace.fedora_releases
-	url = https://github.com/escapace/ansible-fedora_releases.git
 [submodule "roles/escapace.cloudflared"]
 	path = roles/escapace.cloudflared
 	url = https://github.com/escapace/ansible-cloudflared.git
