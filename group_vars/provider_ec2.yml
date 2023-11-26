@@ -5,3 +5,19 @@ dotfiles_username: ec2-user
 storage_setup_physical_device: /dev/sdf
 normalize_username: ec2-user
 provider: ec2
+
+ntp_daemon_options: "-F 2 -6"
+ntp_min_sources: 2
+ntp_servers:
+  - hostname: 2.pool.ntp.org
+    pool: true
+    iburst: true
+  - hostname: time.aws.com
+    pool: true
+    iburst: true
+  - hostname: clock.fmt.he.net
+    pool: true
+    iburst: true
+  - hostname: clock.nyc.he.net
+    pool: true
+    iburst: true
