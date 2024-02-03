@@ -1,4 +1,4 @@
-ansible==9.1.0
+ansible==9.2.0
 docker
 netaddr==0.10.1
 segno==1.6.0
