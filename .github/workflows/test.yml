@@ -45,13 +45,6 @@ jobs:
         - escapace.tuned
         - escapace.unattended_upgrades
         - escapace.vault
-        # - escapace.aws_cloudwatch
-        # - escapace.datadog
-        # - escapace.normalize
-        # - escapace.tor
-        # - escapace.tunnelbroker
-        # - escapace.virtualbox
-        # - escapace.wireguard
     steps:
     - name: docker login
       uses: docker/login-action@v3
