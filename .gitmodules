@@ -58,9 +58,6 @@
 [submodule "roles/escapace.aws_cli"]
 	path = roles/escapace.aws_cli
 	url = https://github.com/escapace/ansible-aws_cli.git
-[submodule "roles/escapace.aws_nat_instance"]
-	path = roles/escapace.aws_nat_instance
-	url = https://github.com/escapace/ansible-aws_nat_instance.git
 [submodule "roles/escapace.consul"]
 	path = roles/escapace.consul
 	url = https://github.com/escapace/ansible-consul.git
