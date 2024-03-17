@@ -1,5 +1,5 @@
 ansible==9.3.0
 docker
 netaddr==0.10.1
-segno==1.6.0
+segno==1.6.1
 passlib==1.7.4
