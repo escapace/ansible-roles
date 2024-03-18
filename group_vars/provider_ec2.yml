@@ -1,5 +1,4 @@
 ---
-
 ansible_user: ec2-user
 dotfiles_username: ec2-user
 storage_setup_physical_device: /dev/sdf

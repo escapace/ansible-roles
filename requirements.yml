@@ -1,4 +1,4 @@
 ---
 collections:
-- ansible.netcommon
-- community.docker
+  - ansible.netcommon
+  - community.docker

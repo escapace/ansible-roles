@@ -1,5 +1,4 @@
 ---
-
 dotfiles_username: yandex-user
 storage_setup_physical_device: /dev/vdb
 normalize_username: yandex-user
