@@ -1,0 +1,20 @@
+[project]
+name = "ansible-roles"
+version = "0.1.0"
+dependencies = [
+    "passlib==1.7.4",
+    "segno==1.6.1",
+    "netaddr==1.2.1",
+    "docker>=7.0.0",
+    "ansible==9.3.0",
+]
+requires-python = ">= 3.8"
+
+[tool.rye]
+virtual = true
+dev-dependencies = [
+    "ansible-lint==24.2.1",
+    "yamllint==1.35.1",
+    "molecule-docker==2.1.0",
+    "molecule==24.2.0",
+]

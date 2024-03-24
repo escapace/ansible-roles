@@ -67,8 +67,8 @@ jobs:
           submodules: "recursive"
       - name: install requirements
         run: |
-          pip3 install -r requirements.txt
-          pip3 install -r requirements-dev.txt
+          pip3 install -r requirements.lock
+          pip3 install -r requirements-dev.lock
           ansible-galaxy collection install -r requirements.yml --upgrade
       - name: run molecule test
         run: |
