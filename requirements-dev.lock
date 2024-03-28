@@ -128,3 +128,4 @@ wcmatch==8.5.1
     # via molecule
 yamllint==1.35.1
     # via ansible-lint
+pip==24.0

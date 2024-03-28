@@ -16,5 +16,6 @@ dev-dependencies = [
     "ansible-lint==24.2.1",
     "yamllint==1.35.1",
     "molecule-docker==2.1.0",
-    "molecule==24.2.0",
+    "molecule>=24.2.0",
+    "pip>=24.0",
 ]
